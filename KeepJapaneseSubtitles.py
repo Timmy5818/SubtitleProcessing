@@ -2,7 +2,7 @@
 import re
 
 # 讀取 SRT 檔案
-srt_file_path = r"E:\影片\Dragon Ball\Films\【DRAGON BALL THE MOVIES】【03】ドラゴンボール 摩訶不思議大冒険 (Dragon Ball Mystical Adventure)\日本語 (Japanese).srt"
+srt_file_path = r"E:\test\日本語 (Japanese).srt"
 
 with open(srt_file_path, "r", encoding="utf-8") as file:
     srt_lines = file.readlines()
@@ -45,7 +45,7 @@ if buffer and timestamp:
         cleaned_srt.append(f"{index}\n{timestamp}\n{cleaned_text}\n")
 
 # 輸出新的 SRT 檔案
-cleaned_srt_output_path = r"E:\影片\Dragon Ball\Films\【DRAGON BALL THE MOVIES】【03】ドラゴンボール 摩訶不思議大冒険 (Dragon Ball Mystical Adventure)\cleaned_japanese_only.srt"
+cleaned_srt_output_path = r"E:\test\cleaned_japanese_only.srt"
 with open(cleaned_srt_output_path, "w", encoding="utf-8") as file:
     file.writelines(cleaned_srt)
 
